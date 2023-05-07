@@ -2,7 +2,7 @@
 
 # xxAI.art
 
-* [ön kod](https://github.com/xxai-art/web)
+Vebsaytın front-end kodu açıq mənbədir, tərcüməni optimallaşdırmağa xoş gəlmisiniz
 
 * [ön kod](https://github.com/xxai-art/web)
 * [Bütövlükdə sayt üçün dil paketləri](https://github.com/xxai-art/web/tree/main/i18n)
