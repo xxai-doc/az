@@ -7,3 +7,4 @@ Veb saytın ön kodu açıq mənbədir, tərcüməni optimallaşdırmağa kömə
 * [ön kod](https://github.com/xxai-art/web)
 * [Bütövlükdə sayt üçün dil paketləri](https://github.com/xxai-art/web/tree/main/i18n)
 * [Giriş modulları üçün dil paketləri](https://github.com/wacpkg/user/tree/main/ui.i18n)
+* [Veb saytının çoxdilli sənədləri](https://github.com/xxai-doc)
