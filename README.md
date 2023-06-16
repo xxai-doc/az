@@ -28,3 +28,47 @@ Aşağıdakı 3 layihə üzərində qurun
 * [@w5/i18n](https://www.npmjs.com/package/@w5/i18n)
 
   `yaml` tərəfindən yaradılan veb saytları tərcümə etmək üçün dil faylları.
+
+### Sənədlərin Tərcümə Avtomatlaşdırılması Təlimatları
+
+[xxai-art/doc](https://github.com/xxai-art/doc) deposuna baxın
+
+Əvvəlcə nodejs, [direnv](https://direnv.net) və [bun](https://github.com/oven-sh/bun) quraşdırmaq, sonra isə kataloqa daxil olduqdan sonra `direnv allow` proqramını işə salmaq tövsiyə olunur.
+
+Həddindən artıq böyük anbarların yüzlərlə dilə çevrilməməsi üçün hər dil üçün ayrıca kod anbarı yaratdım və bu anbarı saxlamaq üçün bir təşkilat yaratdım.
+
+`GITHUB_ACCESS_TOKEN` mühit dəyişəninin qurulması və sonra [create.github.coffee proqramının](https://github.com/xxai-art/doc/blob/main/create.github.coffee) işə salınması anbarı avtomatik yaradacaq.
+
+Təbii ki, onu anbara da qoya bilərsiniz.
+
+Tərcümə skriptinə istinad [run.sh](https://github.com/xxai-art/doc/blob/main/run.sh)
+
+Skript kodu aşağıdakı kimi şərh olunur:
+
+[bunx](https://bun.sh/docs/cli/bunx) daha sürətli olan npx-in əvəzidir. Əlbəttə ki, əgər sizdə bun quraşdırılmayıbsa, onun yerinə `npx` istifadə edə bilərsiniz.
+
+`bunx mdt zh` `.mdt` -ni zh kataloqunda `.md` kimi göstərir, aşağıdakı 2 əlaqəli fayla baxın
+
+* [coffee_plus.mdt](https://github.com/xxai-doc/zh/blob/main/coffee_plus.mdt)
+* [coffee_plus.md](https://github.com/xxai-doc/zh/blob/main/coffee_plus.md)
+
+`bunx i18n` tərcümə üçün əsas koddur (yalnız `nodejs` quraşdırılıbsa, lakin `bun` və `direnv` quraşdırılmayıbsa, tərcümə etmək üçün `npx i18n` də işlədə bilərsiniz).
+
+O, [i18n.yml-i](https://github.com/xxai-art/doc/blob/main/i18n.yml) təhlil edəcək, bu sənəddə `i18n.yml` konfiqurasiyası aşağıdakı kimidir:
+
+```
+en:
+zh: ja ko en
+```
+
+Mənası: Çin dilindən Yapon, Koreya, İngilis dilinə tərcümə, bütün digər dillərə ingiliscə tərcümə. Yalnız Çin və İngilis dilini dəstəkləmək istəyirsinizsə, sadəcə olaraq `zh: en` yaza bilərsiniz.
+
+Sonuncu [gen.README.coffee-](https://github.com/xxai-art/doc/blob/main/gen.README.coffee) dir, o, `README.md` girişini yaratmaq üçün hər bir dilin `README.md` -nin əsas başlığı və ilk altyazısı arasında məzmunu çıxarır. Kod çox sadədir, özünüz baxa bilərsiniz.
+
+Google API pulsuz tərcümə üçün istifadə olunur. Google-a daxil ola bilmirsinizsə, lütfən, proksi konfiqurasiya edin və quraşdırın, məsələn:
+
+```
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+```
+
+Tərcümə skripti `.i18n` qovluğunda tərcümə keşini yaradacaq, lütfən onu `git status` ilə yoxlayın və təkrar tərcümələrin qarşısını almaq üçün kod anbarına əlavə edin.
