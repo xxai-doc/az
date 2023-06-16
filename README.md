@@ -17,14 +17,14 @@ Front-end proqramlaşdırma dili [@w5/coffee_plus-](http://npmjs.com/@w5/coffee_
 
 Aşağıdakı 3 layihə üzərində qurun
 
-### [@w5/mdt](https://www.npmjs.com/package/@w5/mdt)
+* [@w5/mdt](https://www.npmjs.com/package/@w5/mdt)
 
-`.mdt` şəkilçisi ilə işarələmə şablonu `<+ ./coffee_plus/import.js>` ilə oxşar sintaksisi olan xarici fayllara istinad edə bilər.
+  Suffiks `.mdt` dir, siz xarici fayllara istinad etmək üçün `<+ ./coffee_plus/import.js>` ilə oxşar sintaksisdən istifadə edə və `.md` şəkilçisi ilə işarələmə yarada bilərsiniz.
 
-[@w5/trmd](https://www.npmjs.com/package/@w5/trmd)
+* [@w5/trmd](https://www.npmjs.com/package/@w5/trmd)
 
-Markdown tərcüməsi kodları və keçidləri tərcümə etməyəcək və tərcümə edilmiş cümlələri yaddaşda saxlayacaq. Tərcümə dəyişdirilibsə, lakin orijinal mətn dəyişdirilməyibsə, onun yenidən icrası tərcümənin dəyişdirilməsinin üzərinə yazılmayacaq.
+  Markdown tərcüməsi kodları və keçidləri tərcümə etməyəcək və tərcümə edilmiş cümlələri yaddaşda saxlayacaq. Tərcümə dəyişdirilibsə, lakin orijinal mətn dəyişdirilməyibsə, onun yenidən icrası tərcümənin dəyişdirilməsinin üzərinə yazılmayacaq.
 
-[@w5/i18n](https://www.npmjs.com/package/@w5/i18n)
+* [@w5/i18n](https://www.npmjs.com/package/@w5/i18n)
 
-`yaml` tərəfindən yaradılan veb saytları tərcümə etmək üçün dil faylları.
+  `yaml` tərəfindən yaradılan veb saytları tərcümə etmək üçün dil faylları.
