@@ -1,10 +1,10 @@
 <p align="center"><a href="https://xxai.art"><img src="https://cdn.jsdelivr.net/gh/xxai-art/doc/logo.svg"/></a><br/><a href="https://xxai.art"><img src="https://cdn.jsdelivr.net/gh/xxai-art/doc/xxai.svg"/></a></p><p align="center"><a href="https://github.com/xxai-art/doc#readme"><img alt="I18N" src="https://cdn.jsdelivr.net/gh/wactax/img/t.svg"/></a>　<a href="https://groups.google.com/u/0/g/xxai-art"><img alt="Google Groups" src="https://cdn.jsdelivr.net/gh/wactax/img/g-groups.svg"/></a></p>
 
-# xxAI.art
+Kataloqa daxil olduqdan sonra əvvəlcə nodejs, [direnv](https://direnv.net) , [bun](https://github.com/oven-sh/bun) quraşdırmaq, sonra isə `direnv allow` quraşdırmaq tövsiyə olunur ( [.envrc](https://github.com/xxai-art/doc/blob/main/.envrc) kataloqa daxil olduqdan sonra avtomatik icra olunacaq).
 
-Veb sayt kodunun bir hissəsi açıq mənbədir, tərcüməni optimallaşdırmağa kömək etmək üçün xoş gəlmisiniz.
+Mənası: Çin dilindən Yapon, Koreya, İngilis dilinə tərcümə, bütün digər dillərə ingiliscə tərcümə. Yalnız Çin və İngilis dilini dəstəkləmək istəyirsinizsə, sadəcə olaraq `zh: en` yaza bilərsiniz.
 
-## ön kod
+Mənası: Çin dilindən Yapon, Koreya, İngilis dilinə tərcümə, bütün digər dillərə ingiliscə tərcümə. Yalnız Çin və İngilis dilini dəstəkləmək istəyirsinizsə, sadəcə olaraq `zh: en` yaza bilərsiniz.
 
 * [ön kod](https://github.com/xxai-art/web)
 * [Bütövlükdə sayt üçün dil paketləri](https://github.com/xxai-art/web/tree/main/i18n)
@@ -31,15 +31,15 @@ Aşağıdakı 3 layihə üzərində qurun
 
 ### Sənədlərin Tərcümə Avtomatlaşdırılması Təlimatları
 
-[xxai-art/doc](https://github.com/xxai-art/doc) deposuna baxın
+[Xxai-art/doc](https://github.com/xxai-art/doc) kod anbarına baxın
 
-Əvvəlcə nodejs, [direnv](https://direnv.net) və [bun](https://github.com/oven-sh/bun) quraşdırmaq, sonra isə kataloqa daxil olduqdan sonra `direnv allow` proqramını işə salmaq tövsiyə olunur.
+Kataloqa daxil olduqdan sonra əvvəlcə nodejs, [direnv](https://direnv.net) , [bun](https://github.com/oven-sh/bun) quraşdırmaq, sonra isə `direnv allow` quraşdırmaq tövsiyə olunur ( [.envrc](https://github.com/xxai-art/doc/blob/main/.envrc) kataloqa daxil olduqdan sonra avtomatik icra olunacaq).
 
-Həddindən artıq böyük anbarların yüzlərlə dilə çevrilməməsi üçün hər dil üçün ayrıca kod anbarı yaratdım və bu anbarı saxlamaq üçün bir təşkilat yaratdım.
+Yüzlərlə dilə tərcümə edilən böyük kod bazasından qaçmaq üçün hər dil üçün ayrıca kod bazası yaratdım və kod bazasını saxlamaq üçün bir təşkilat yaratdım.
 
-`GITHUB_ACCESS_TOKEN` mühit dəyişəninin qurulması və sonra [create.github.coffee proqramının](https://github.com/xxai-art/doc/blob/main/create.github.coffee) işə salınması anbarı avtomatik yaradacaq.
+`GITHUB_ACCESS_TOKEN` mühit dəyişəninin qurulması və sonra [create.github.coffee proqramının](https://github.com/xxai-art/doc/blob/main/create.github.coffee) işə salınması avtomatik olaraq kod anbarını yaradacaq.
 
-Təbii ki, onu anbara da qoya bilərsiniz.
+Əlbəttə ki, onu kod bazasına da qoya bilərsiniz.
 
 Tərcümə skriptinə istinad [run.sh](https://github.com/xxai-art/doc/blob/main/run.sh)
 
@@ -71,4 +71,8 @@ Google API pulsuz tərcümə üçün istifadə olunur. Google-a daxil ola bilmir
 export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
 ```
 
-Tərcümə skripti `.i18n` qovluğunda tərcümə keşini yaradacaq, lütfən onu `git status` ilə yoxlayın və təkrar tərcümələrin qarşısını almaq üçün kod anbarına əlavə edin.
+Tərcümə skripti `.i18n` qovluğunda tərcümə edilmiş keş yaradacaq, lütfən onu `git status` ilə yoxlayın və təkrar tərcümələrin qarşısını almaq üçün onu kod anbarına əlavə edin.
+
+Keşi yeniləmək üçün tərcüməni hər dəfə dəyişdirəndə `bunx i18n` işə salın.
+
+Orijinal mətn və tərcümə eyni zamanda dəyişdirilərsə, keş çaşdırılacaq, buna görə də dəyişdirmək istəyirsinizsə, yalnız birini dəyişdirə və sonra keşi yeniləmək üçün `bunx i18n` işə sala bilərsiniz.
