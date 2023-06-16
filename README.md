@@ -2,9 +2,29 @@
 
 # xxAI.art
 
-Vebsaytın front-end kodu açıq mənbədir, tərcüməni optimallaşdırmağa xoş gəlmisiniz
+Veb sayt kodunun bir hissəsi açıq mənbədir, tərcüməni optimallaşdırmağa kömək etmək üçün xoş gəlmisiniz.
+
+## ön kod
 
 * [ön kod](https://github.com/xxai-art/web)
 * [Bütövlükdə sayt üçün dil paketləri](https://github.com/xxai-art/web/tree/main/i18n)
 * [Giriş modulları üçün dil paketləri](https://github.com/wacpkg/user/tree/main/ui.i18n)
 * [Veb saytının çoxdilli sənədləri](https://github.com/xxai-doc)
+
+Front-end proqramlaşdırma dili [@w5/coffee_plus-](http://npmjs.com/@w5/coffee_plus) dur ki, bu da coffeescript sintaksisinə əsaslanan bəzi funksiyalar əlavə edir, bax [./coffee_plus.md](./coffee_plus.md) .
+
+## Veb saytların və sənədlərin beynəlmiləlləşdirilməsi
+
+Aşağıdakı 3 layihə üzərində qurun
+
+### [@w5/mdt](https://www.npmjs.com/package/@w5/mdt)
+
+`.mdt` şəkilçisi ilə işarələmə şablonu `<+ ./coffee_plus/import.js>` ilə oxşar sintaksisi olan xarici fayllara istinad edə bilər.
+
+[@w5/trmd](https://www.npmjs.com/package/@w5/trmd)
+
+Markdown tərcüməsi kodları və keçidləri tərcümə etməyəcək və tərcümə edilmiş cümlələri yaddaşda saxlayacaq. Tərcümə dəyişdirilibsə, lakin orijinal mətn dəyişdirilməyibsə, onun yenidən icrası tərcümənin dəyişdirilməsinin üzərinə yazılmayacaq.
+
+[@w5/i18n](https://www.npmjs.com/package/@w5/i18n)
+
+`yaml` tərəfindən yaradılan veb saytları tərcümə etmək üçün dil faylları.
