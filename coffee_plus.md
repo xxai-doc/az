@@ -2,13 +2,13 @@
 
 [@w5/coffee_plus](http://npmjs.com/@w5/coffee_plus) , coffeescript sintaksisi əsasında bəzi funksiyalar əlavə edin, bax [coffee_plus](./coffee_plus.md) .
 
-* dəyişəni elan edin
+## dəyişəni elan edin
 
 ```
 + var1, var2
 ```
 
-* bəyannamə etiketi
+## bəyannamə etiketi
 
 `:$` [svelte](https://svelte.dev/docs#component-format-script-3-$-marks-a-statement-as-reactive) ilə istifadə üçündür.
 
@@ -90,7 +90,7 @@ $ : (func = function() {
 });
 ```
 
-* sürətli idxal
+## sürətli idxal
 
 ```
 > zx/globals:
